@@ -4,6 +4,7 @@ import "../src/components/category-item/category-item.scss"
 import {Routes, Route, Outlet} from 'react-router-dom';
 import Home from './components/routes/Home';
 import Navigation from './components/routes/navigation/Navigation';
+import SignIn from './components/routes/sing-in/SingIn';
 function App() {
 const Shop = () =>{
   return (
@@ -24,6 +25,8 @@ const Shop = () =>{
 
 </Route>
 <Route path='shop' element={<Shop/>}/>
+<Route path='sing-in' element={<SignIn/>}/>
+
           </Route>
 
    
