@@ -2,7 +2,6 @@
 import {getRedirectResult} from "firebase/auth"
 import { useEffect, useState } from "react";
 import FormInput from "../../form-input/FormInput";
-// import {singInWithEmail} from "../../firebase/firebaase"
 import { singInWithGoogle, createUserDocument } from "../../firebase/firebase";
 const SignIn = () => {
   const [form, setForm] = useState( {
@@ -13,6 +12,7 @@ const SignIn = () => {
     const {user} = await singInWithGoogle();
     // console.log(response);
     createUserDocument(user);
+    const userDocRef = await createUserDocument(user)
     
   }
     // const logGoogleUser = async () => {
